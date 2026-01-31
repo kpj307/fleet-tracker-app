@@ -3,9 +3,5 @@ services:
     name: fleet-tracker-api
     env: python
     plan: free
-    buildCommand: |
-      cd backend
-      pip install -r requirements.txt
-    startCommand: |
-      cd backend
-      gunicorn backend.wsgi:application
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn backend.wsgi:application
